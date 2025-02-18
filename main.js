@@ -7,26 +7,28 @@ let convert = document.querySelector("button.convert");
 let result = document.querySelector("div.result");
 let objKeys = Object.keys(COUNTRY_NAMES);
 
-objKeys.forEach((keys) => {
-  fromSelect.innerHTML += `<option>${keys} || ${COUNTRY_NAMES[keys]}</option>`;
-});
+let optionsHTML = objKeys
+  .map(
+    (key) => `<option value="${key}">${key} || ${COUNTRY_NAMES[key]}</option>`
+  )
+  .join("");
+
+fromSelect.innerHTML = optionsHTML;
+toSelect.innerHTML = optionsHTML;
 
 localStorage.getItem("userFavCur") &&
   (fromSelect.value = localStorage.getItem("userFavCur"));
 
-objKeys.forEach((keys) => {
-  toSelect.innerHTML += `<option>${keys} || ${COUNTRY_NAMES[keys]}</option>`;
-});
 localStorage.getItem("userLastInfo") &&
   (toSelect.value = localStorage.getItem("userLastInfo"));
 
 exchangeBtn.addEventListener("click", () => {
-  let first = fromSelect.value;
-  fromSelect.value = toSelect.value;
-  toSelect.value = first;
-  localStorage.setItem("userFavCur", first);
-  localStorage.setItem("userLastInfo", fromSelect.value);
+  [fromSelect.value, toSelect.value] = [toSelect.value, fromSelect.value];
+
+  localStorage.setItem("userFavCur", fromSelect.value);
+  localStorage.setItem("userLastInfo", toSelect.value);
 });
+
 convert.addEventListener("click", () => {
   let first = fromSelect.value;
   let sec = toSelect.value;
