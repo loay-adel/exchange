@@ -25,7 +25,7 @@
     </nav>
     <main class="d-flex justify-content-center">
       <div
-        class="d-flex justify-content-center flex-column gap-3 ps-3 bg-black text-white mt-5 w-75"
+        class="d-flex justify-content-center flex-column gap-3 ps-3 bg-black text-white mt-5 w-75 rounded p-2 whole-container"
       >
         <h1>Amount</h1>
         <div
@@ -40,25 +40,22 @@
           <div
             class="flag-container position-relative w-100 d-flex gap-1 justify-content-center"
           >
-            <div class="from"></div>
             <select name="" id="fromselect" class="w-50"></select>
           </div>
           <div
             class="flag-container position-relative w-100 d-flex gap-1 justify-content-center"
           >
-            <div class="toS"></div>
-
             <select name="" id="toselect" class="w-50"></select>
           </div>
 
           <button class="convert w-50">convert</button>
         </div>
         <h2>value</h2>
-        <div class="result"></div>
+        <div class="result fs-4"></div>
       </div>
     </main>
     <script src="bootstrap.bundle.min.js"></script>
-    <script src="countries.js"></script>
+    <script src="countries.js" type="module"></script>
     <script src="main.js" type="module"></script>
   </body>
 </html>

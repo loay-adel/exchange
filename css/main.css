@@ -3,8 +3,32 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 .exchange-btn {
   top: -5px;
-  right: -60px;
+  right: -2em;
+  border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  nav > p {
+    display: none;
+  }
+  .whole-container {
+    width: 100% !important;
+  }
+
+  .input,
+  #fromselect,
+  #toselect,
+  .convert {
+    width: 75% !important;
+  }
+  /* .exchange-btn {
+    
+  } */
+}
+@media (min-width: 768px) {
+  nav > p {
+    display: block;
+  }
 }

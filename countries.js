@@ -1,5 +1,4 @@
-export { COUNTRY_NAMES };
-const COUNTRY_NAMES = {
+export const COUNTRY_NAMES = {
   AED: "United Arab Emirates Dirham",
   AFN: "Afghan Afghani",
   ALL: "Albanian Lek",
