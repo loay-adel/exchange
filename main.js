@@ -28,6 +28,8 @@ exchangeBtn.addEventListener("click", () => {
 convert.addEventListener("click", () => {
   let first = fromSelect.value;
   let sec = toSelect.value;
+  localStorage.setItem("userFavCur", first);
+  localStorage.setItem("userLastInfo", sec);
   let link = first.slice(0, 3);
   let exchangeRate = document.querySelector("input.userInput").value || 1;
 
