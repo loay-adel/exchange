@@ -24,12 +24,13 @@ exchangeBtn.addEventListener("click", () => {
   let first = fromSelect.value;
   fromSelect.value = toSelect.value;
   toSelect.value = first;
+  localStorage.setItem("userFavCur", first);
+  localStorage.setItem("userLastInfo", fromSelect.value);
 });
 convert.addEventListener("click", () => {
   let first = fromSelect.value;
   let sec = toSelect.value;
-  localStorage.setItem("userFavCur", first);
-  localStorage.setItem("userLastInfo", sec);
+
   let link = first.slice(0, 3);
   let exchangeRate = document.querySelector("input.userInput").value || 1;
 
