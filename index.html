@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Study Buddy</title>
+  </head>
+  <body>
+    <nav
+      class="d-flex justify-content-around align-items-center bg-body-secondary p-2"
+    >
+      <img src="nav-banner.png" alt="" />
+      <p>Currency-Converter</p>
+    </nav>
+    <main class="d-flex justify-content-center">
+      <div
+        class="d-flex justify-content-center flex-column gap-3 ps-3 bg-black text-white mt-5 w-75"
+      >
+        <h1>Amount</h1>
+        <div
+          class="d-flex align-items-center flex-column gap-3 position-relative"
+        >
+          <div class="input position-relative w-50">
+            <input class="w-100 userInput" type="text" />
+            <button class="exchange-btn position-absolute btn btn-info">
+              <i class="fa-solid fa-arrow-right-arrow-left arrow-logo"></i>
+            </button>
+          </div>
+          <div
+            class="flag-container position-relative w-100 d-flex gap-1 justify-content-center"
+          >
+            <div class="from"></div>
+            <select name="" id="fromselect" class="w-50"></select>
+          </div>
+          <div
+            class="flag-container position-relative w-100 d-flex gap-1 justify-content-center"
+          >
+            <div class="toS"></div>
+
+            <select name="" id="toselect" class="w-50"></select>
+          </div>
+
+          <button class="convert w-50">convert</button>
+        </div>
+        <h2>value</h2>
+        <div class="result"></div>
+      </div>
+    </main>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="countries.js"></script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
